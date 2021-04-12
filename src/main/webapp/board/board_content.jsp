@@ -80,7 +80,8 @@
 						<td width="20%" align="center"><b>홈페이지</b></td>
 						<td><%=board.getHomepage()%></td>
 						<td width="20%" align="center"><b>첨부파일</b></td>
-						<td><%=board.getFilename()%></td>
+						<!-- 파일 다운로드 -->
+						<td><a href="board/board_download.jsp?filename=<%=board.getFilename()%>"><%=board.getFilename()%></a></td>
 					</tr>
 					<tr>
 						<td width="20%" align="center"><b>제목</b></td>

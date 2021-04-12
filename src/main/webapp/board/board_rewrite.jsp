@@ -72,7 +72,7 @@
 					<tr>
 						<td width="20%" align="center">제목</td>
 						<td width="80%" align="left">
-							<input type="text" name="subject" size="40" value="[RE]<%= subject%>">
+							<input type="text" name="subject" size="40" value="RE<%= subject%>">
 						</td>
 
 					</tr>

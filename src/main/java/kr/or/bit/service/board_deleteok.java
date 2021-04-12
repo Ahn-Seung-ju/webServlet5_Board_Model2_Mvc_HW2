@@ -24,11 +24,11 @@ public class board_deleteok implements Action {
 			String msg="";
 			String url="";
 			if(result > 0){
-				msg="delete success";
-				url="board_list.jsp";
+				msg="삭제 성공";
+				url="/Boardlist.board";
 			}else{
-				msg="delete fail";
-				url="board_list.jsp";
+				msg="삭제 실패";
+				url="/Boardlist.board";
 			}
 			request.setAttribute("board_msg",msg);
 			request.setAttribute("board_url",url);
@@ -39,7 +39,7 @@ public class board_deleteok implements Action {
 		
 		ActionFoward forward = new ActionFoward();
 		forward.setRedirect(false);
-		forward.setPath("");
+		forward.setPath("/board/redirect.jsp");
 		
 		
 		return forward;

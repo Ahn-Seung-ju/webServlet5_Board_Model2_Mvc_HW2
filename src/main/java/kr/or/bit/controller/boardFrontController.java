@@ -39,6 +39,7 @@ public class boardFrontController extends HttpServlet {
     	
     	//게시판 리스트
     	if(url_Command.equals("/Boardlist.board")) {
+    		//UI 이동
     		forward = new ActionFoward();
     		forward.setPath("/board/board_list.jsp");
     		

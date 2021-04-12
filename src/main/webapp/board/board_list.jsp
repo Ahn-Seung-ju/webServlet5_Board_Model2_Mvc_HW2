@@ -111,7 +111,7 @@
 								&nbsp;&nbsp;&nbsp;
 							</c:forEach>
 							<c:if test="${board.depth > 0}">
-								<img src="../images/re.gif">
+								<img src="<%=request.getContextPath()%>/images/re.gif">
 							</c:if>
 							<a href="Boardcontent.board?idx=${board.idx}&cp=${cpage}&ps=${pagesize}">
 								<c:choose>
@@ -149,7 +149,7 @@
 					
 						<!--이전 링크 --> 
 						<c:if test="${cpage > 1}">
-							<a href="boardlist.board?cp=${cpage-1}&ps=${pagesize}">이전</a>
+							<a href="Boardlist.board?cp=${cpage-1}&ps=${pagesize}">이전</a>
 						</c:if>
 						<!-- page 목록 나열하기 -->
 						<c:forEach var="i" begin="1" end="${pagecount}" step="1">
@@ -158,13 +158,13 @@
 										<font color="red" >[${i}]</font>
 								</c:when>
 								<c:otherwise>
-									<a href="boardlist.board?cp=${i}&ps=${pagesize}">[${i}]</a>
+									<a href="Boardlist.board?cp=${i}&ps=${pagesize}">[${i}]</a>
 								</c:otherwise>
 							</c:choose>
 						</c:forEach>
 						<!--다음 링크 --> 
 						<c:if test="${cpage < pagecount}">
-							<a href="boardlist.jsp?cp=${cpage+1}&ps=${pagesize}">다음</a>
+							<a href="Boardlist.board?cp=${cpage+1}&ps=${pagesize}">다음</a>
 						</c:if>
 					</td>
 					<td colspan="2" align="center">총 게시물 수 : <%= totalboardcount %>
@@ -174,7 +174,7 @@
 					<td colspan="5" align="center">
 					<%
 						int pagersize=3; //[1][2][3]
-						ThePager pager = new ThePager(totalboardcount,cpage,pagesize,pagersize,"/Boardlist.board");
+						ThePager pager = new ThePager(totalboardcount,cpage,pagesize,pagersize,"Boardlist.board");
 					%>
 					<%= pager.toString() %>
 					</td>

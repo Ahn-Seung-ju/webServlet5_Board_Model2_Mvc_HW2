@@ -117,9 +117,7 @@
 						<tr height="100">
 							<td width="20%" align="center"><b>글내용</b></td>
 							<td colspan="3">
-								<textarea rows="7" cols="50" name="content">
-									<%=board.getContent()%>
-								</textarea>
+								<textarea rows="7" cols="50" name="content"><%=board.getContent()%></textarea>
 							</td>
 						</tr>
 
