@@ -18,7 +18,7 @@
 		maxActive="100"
 		password="1004" 
 		username="bituser"
-		url="jdbc:oracle:thin:@192.168.219.130:1521:XE"
+		url="jdbc:oracle:thin:@192.168.0.232:1521:XE"
 		driverClassName="oracle.jdbc.OracleDriver" 
 		type="javax.sql.DataSource"
 		auth="Container" 
